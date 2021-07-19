@@ -1,21 +1,25 @@
 # SystemTarget
 
-**TODO: Add description**
+An attempt to standardise target "triples".
 
-## Installation
+Maybe it could become `%System.Target{}` and `System.target/0` one day?
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `system_target` to your list of dependencies in `mix.exs`:
+## Examples
 
-```elixir
-def deps do
-  [
-    {:system_target, "~> 0.1.0"}
-  ]
-end
+```bash
+# intel mac
+$ elixir -e 'Mix.install([{:system_target, github: "wojtekmach/system_target"}]); IO.puts SystemTarget.get()'
+x86_64-apple-darwin-gnu
+
+# intel mac + docker
+$ docker run --rm -it elixir:1.12 elixir -e 'Mix.install([{:system_target, github: "wojtekmach/system_target"}]); IO.puts SystemTarget.get()'
+x86_64-pc-darwin-gnu
+
+# m1 macbook
+$ elixir -e 'Mix.install([{:system_target, github: "wojtekmach/system_target"}]); IO.puts SystemTarget.get()'
+aarch64-apple-darwin-gnu
+
+# m1 macbook + docker
+$ docker run --rm -it elixir:1.12 elixir -e 'Mix.install([{:system_target, github: "wojtekmach/system_target"}]); IO.puts SystemTarget.get()'
+aarch64-unknown-linux-gnu
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/system_target](https://hexdocs.pm/system_target).
-
