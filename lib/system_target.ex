@@ -24,14 +24,8 @@ defmodule SystemTarget do
 
         %__MODULE__{arch: arch, cpu: "apple", os: "darwin", abi: "gnu"}
 
-      {:win32, _} ->
-        raise "not yet supported"
-    end
-  end
-
-  defimpl String.Chars do
-    def to_string(target) do
-      [target.arch, target.cpu, target.os, target.abi] |> Enum.join("-")
+      other ->
+        raise "not yet supported: #{inspect(other)}"
     end
   end
 end
