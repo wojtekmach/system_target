@@ -7,7 +7,7 @@ Here are some example use cases, the following project needs to figure out the c
 - https://github.com/phoenixframework/esbuild
 - https://github.com/ityonemo/zigler
 
-This project obviously very naive atempt at the moment. We should look like others solve this problem, e.g. [Zig `std.Target`](https://ziglang.org/documentation/master/std/#std;Target), and figure out what makes the most sense.
+This project is obviously a very naive atempt at the moment. We should look like others solve this problem, e.g. [Zig `std.Target`](https://ziglang.org/documentation/master/std/#std;Target), and figure out what makes the most sense.
 
 Maybe it could become `%System.Target{}` and `System.target/0` one day? Or ideally: `erlang:system_info(system_target)`.
 
